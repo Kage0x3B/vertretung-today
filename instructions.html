@@ -47,6 +47,7 @@
 
         a:hover {
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            transform: translate(-10px, -10px);
         }
 
         .app-name {
@@ -61,9 +62,21 @@
             box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
         }
 
+        .app-name.small {
+            padding: 4px;
+        }
+
         em {
             background-color: rgba(221, 0, 0, 0.1);
             padding: 0 2px;
+        }
+
+        li {
+            margin-bottom: 48px;
+        }
+
+        li h4, li p, li a {
+            margin: 8px 0;
         }
 
         @media (max-width: 767px) {
@@ -75,7 +88,7 @@
     </style>
 </head>
 <body>
-<h1><a class="app-name" href="https://app.vertretungtoday.de">VertretungToday</a> - Halbjahres Projekt</h1>
+<h1><a class="app-name" href="https://App.VertretungToday.de">VertretungToday</a> - Halbjahres Projekt</h1>
 <hr>
 
 <h2>Projekt Struktur</h2>
@@ -102,7 +115,17 @@
         </li>
     </ul>
 </div>
-
+<hr>
+<h2>Benutzung der App</h2>
+<div style="margin-bottom: 32px">
+    Da das Projekt etwas komplexer ist und es schwierig sein könnte, mal schnell eine eigene Version zu kompilieren und
+    bereitzustellen zum testen,<br />
+    habe ich auf <a class="app-name small" href="https://App.VertretungToday.de">App.VertretungToday.de</a> die fertige
+    Version am laufen.<br />
+    Die App brauch einen ungefähr neueren Browser, egal ob auf dem Smartphone oder Desktop, mit Firefox und Chrome wurde getestet,
+    obwohl ich eher Chrome empfehlen würde, damit die Web App auch installiert werden kann.
+</div>
+<hr>
 <h2>Source Code</h2>
 <div>
     Der Source Code für das Projekt ist auf Github, aufgeteilt in drei Repositories:
@@ -123,10 +146,28 @@
         </li>
         <li>
             <h4>VertretungToday Homepage (diese Seite)</h4>
+            <a href="https://github.com/Kage0x3B/vertretung-today">Kage0x3B/vertretung-today</a>
+            <p>(Nicht Teil des Halbjahres Projekt aber vielleicht ganz interessant und gehört wohl zu dem ganzen Projekt dazu)</p>
         </li>
     </ul>
-    <h3>!! Wichtig !!</h3>
-    I
+    <h3><em>!! Wichtig !!</em></h3>
+    In den Unterordnern der Quellcode Ordner vom Frontend und Backend befinden sich oft <em>README.txt</em> Dateien
+    mit weiteren interessanten Informationen und Kommentaren damit das Projekt besser verstanden werden kann.<br />
+    Außerdem sind in den Quellcode Dateien einige Kommentare, sehr oft am Anfang der Datei (teilweise nach Importen)
+    und oft vor Methoden/Funktionen.
+</div>
+<hr>
+<h2>Disclaimer ..?</h2>
+<div>
+    Ich habe das Projekt zwar noch <em>nicht</em> mit der Schulleitung abgesprochen (werde ich aber wohl noch machen),
+    habe aber trotzdem auf Probleme wie Datenschutz geachtet (und nicht einfach Moodle umgangen und die Daten öffentlich
+    bereitgestellt) indem ich, bevor man sich mit einem Account einloggen kann und somit die Vertretungspläne sehen kann,
+    eine Bestätigung des Benutzerkontos vorraussetze.<br />
+    Diese Bestätigung kann automatisch erfolgen mit einer Überprüfung des Moodle Kontos, oder auch manuell, indem man
+    mir direkt eine E-Mail sendet, besonders weil die Bestätigung über das Moodle Konto die Eingabe des Benutzernamen
+    und Moodle Passwort erfordert und dieses an den Backend Server zum Überprüfen senden muss.<br />
+    Die Daten werden zwar nicht gespeichert, was theoretisch im Quellcode überprüft werden kann, aber trotzdem natürlich
+    so dem Endbenutzer nicht 100% sicher ist, deswegen die zweite Bestätigungsmethode.
 </div>
 </body>
 </html>
