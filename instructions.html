@@ -1,0 +1,132 @@
+<!-- Eine Seite mit Informationen über VertretungToday, was auch mein Halbjahres Projekt für den Informatik GK war -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset='utf-8'>
+    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"
+          name="viewport">
+
+    <title>VertretungToday - Halbjahres Projekt</title>
+
+    <link href="/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+    <link href="/icons/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="/manifest.webmanifest" rel="manifest">
+    <link color="#dd0000" href="/icons/safari-pinned-tab.svg" rel="mask-icon">
+    <link href="/icons/favicon.ico" rel="shortcut icon">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="VertretungToday" name="apple-mobile-web-app-title">
+    <meta content="VertretungToday" name="application-name">
+    <meta content="#dd0000" name="msapplication-TileColor">
+    <meta content="/browserconfig.xml" name="msapplication-config">
+    <meta content="#dd0000" name="theme-color">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: "Roboto", sans-serif;
+            color: #212529;
+            margin: 5vh auto;
+            max-width: 60vw;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #dd0000;
+            background-color: #fff;
+            padding: 4px;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+
+        a:hover {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .app-name {
+            color: #fff;
+            background-color: #dd0000;
+            padding: 8px;
+            text-decoration: none;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .app-name:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        em {
+            background-color: rgba(221, 0, 0, 0.1);
+            padding: 0 2px;
+        }
+
+        @media (max-width: 767px) {
+            body {
+                margin: 2vh auto;
+                max-width: 90vw;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1><a class="app-name" href="https://app.vertretungtoday.de">VertretungToday</a> - Halbjahres Projekt</h1>
+<hr>
+
+<h2>Projekt Struktur</h2>
+<div>
+    Das Projekt ist in zwei große Teile aufgeteilt:
+    <ul>
+        <li>
+            <h4>Das VertretungToday Frontend, also die Web App, die der Benutzer zu sehen bekommt.</h4>
+            Das Frontend ist eine Progressive Web Applikation, eine Webseite, die zwar als normale Webseite benutzt
+            werden kann, aber mit modernen Browsern auch als App auf den Desktop, oder den Startbildschirm bei
+            Smartphones,
+            installiert werden kann und dann auch offline funktioniert.<br/>
+            Für das Frontend wird <em>HTML</em>, <em>(S)CSS</em>, <em>Javascript</em> und die Bibliothek und Compiler <a href="https://svelte.dev">Svelte</a>
+            benutzt um eine reaktive App zu programmieren. (Sowie sehr viele andere Bibliotheken, die ich hier nicht
+            alle aufgelistet habe, was aber wenn gewünscht nachgereicht wird)
+        </li>
+        <li>
+            <h4>Das VertretungToday Backend</h4>
+            Ein <a href="https://spring.io">Spring</a> (mit <a href="https://spring.io/projects/spring-boot">Spring
+            Boot</a>) Server,
+            also geschrieben in <em>Java</em>, der sich um die Funktionen hinter der App kümmert, sowas wie Authentifizierung,
+            Bestätigung von Benutzerkonten mit Moodle, Vertretungspläne von Moodle einlesen, weiterverarbeiten und
+            bereitstellen und vieles mehr.
+        </li>
+    </ul>
+</div>
+
+<h2>Source Code</h2>
+<div>
+    Der Source Code für das Projekt ist auf Github, aufgeteilt in drei Repositories:
+    <ul>
+        <li>
+            <h4>VertretungToday Frontend App</h4>
+            <a href="https://github.com/Kage0x3B/vertretung-today-frontend/tree/comments">Kage0x3B/vertretung-today-frontend</a>
+            <p>(Der Link führt direkt auf eine Version mit mehr Kommentaren auf Deutsch)</p>
+        </li>
+        <li>
+            <h4>VertretungToday Backend Server</h4>
+            <a href="https://github.com/Kage0x3B/vertretung-today-backend/tree/comments">Kage0x3B/vertretung-today-backend</a>
+            <p>(Der Link führt direkt auf eine Version mit mehr Kommentaren auf Deutsch)</p>
+            <p>Wobei der eigentliche Java Quellcode in einem Unterordner ist:</p>
+            <a href="https://github.com/Kage0x3B/vertretung-today-backend/tree/comments/src/main/java/de/syscy/vertretungtoday">
+                Kage0x3B/vertretung-today-backend/src/main/java/de/syscy/vertretungtoday
+            </a>
+        </li>
+        <li>
+            <h4>VertretungToday Homepage (diese Seite)</h4>
+        </li>
+    </ul>
+    <h3>!! Wichtig !!</h3>
+    I
+</div>
+</body>
+</html>
