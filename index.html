@@ -22,16 +22,15 @@
     <meta content="/browserconfig.xml" name="msapplication-config">
     <meta content="#dd0000" name="theme-color">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
 
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #f4f4f4;
             font-family: "Roboto", sans-serif;
             color: #212529;
-            margin: 5vh auto;
-            max-width: 60vw;
-            line-height: 1.5;
+            padding: 0;
+            margin: 0;
         }
 
         a {
@@ -47,22 +46,105 @@
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         }
 
+        .mdc-button {
+            font-family: Roboto, sans-serif;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            font-size: .875rem;
+            line-height: 2.25rem;
+            font-weight: 500;
+            letter-spacing: .08929em;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 0 8px;
+            display: inline-flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            min-width: 64px;
+            height: 36px;
+            border: none;
+            outline: none;
+            user-select: none;
+            -webkit-appearance: none;
+            overflow: hidden;
+            vertical-align: middle;
+            border-radius: 4px;
+        }
 
-        @media (max-width: 767px) {
+        .big-button {
+            color: #fff;
+            background-color: #dd0000;
+            padding: 8px;
+            text-decoration: none;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            margin: 24px;
+            width: 50%;
+            height: 48px;
+            border-radius: 4px;
+        }
+
+        .big-button:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        main {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            height: auto;
+            width: 100%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            margin-top: 32px;
+        }
+
+        footer {
+            color: #777;
+            padding: 0 16px;
+        }
+
+        @media (min-width: 768px) {
             body {
-                margin: 2vh auto;
-                max-width: 90vw;
+                margin: 16px 0;
+            }
+
+            img {
+                height: 75vh;
+                width: auto;
             }
         }
     </style>
 </head>
 <body>
-    <h1>VertretungToday</h1>
-    <p>
-        Die eigentliche App kann unter <a href="https://app.vertretungtoday.de">app.vertretungtoday.de</a> benutzt
-        werden, diese Startseite wird später gemacht.
-    </p>
-
-    <a href="impress.html">Impressum</a>
+<main>
+    <picture>
+        <source srcset="maincontent.webp" type="image/webp">
+        <source srcset="maincontent.jpg" type="image/jpeg">
+        <img alt="VertretungToday" src="maincontent.jpg">
+    </picture>
+    <div>
+        <a class="big-button mdc-button" href="https://app.vertretungtoday.de">Try the App Now!!</a>
+        <footer style="text-align: center">
+            <small>© Copyright 2019, Moritz Hein - <a href="impress.html">Impressum</a><br />
+                (Credit to <a href="https://undraw.co/">unDraw</a>
+                for their nice illustrations, one of which is used in the image)</small>
+        </footer>
+    </div>
+</main>
 </body>
 </html>
